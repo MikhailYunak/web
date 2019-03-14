@@ -7,23 +7,19 @@ class Animals {
 
 // Создаем прототипы класса
 
-let fox = new Animals (
+var animals = {
+    'fox' : fox = new Animals (
         'Лиса хитрый зверь',
         'Он ничем не отличался от ста тысяч других лисиц',
-        'Рыжий лис');
-let wolf = new Animals(
+        'Рыжий лис'),
+    'wolf': wolf = new Animals(
         'Волк вожак стаи',
         'Волк собирает грибы в лесу',
-        'Волк меняет шкуру, но не нрав');
-let boar = new Animals(
+        'Волк меняет шкуру, но не нрав'),
+    'boar': boar = new Animals(
         'Кабан дикий свин',
         'Кабан свинья, которая не поддалась на уговоры',
-        'Кабан санитар леса');
-
-var animals = {
-    'fox' : fox,
-    'wolf': wolf,
-    'boar': boar,
+        'Кабан санитар леса'),
 };
 var wildAnimal = new Animals();
 
