@@ -22,9 +22,12 @@ var animals = {
         'Кабан санитар леса'),
 };
 var wildAnimal = new Animals();
-
-let select = document.getElementById("mySelect");
-select.addEventListener('change', function() {
+// Значение по умолчанию
+let select = document.getElementById("mySelect").value;
+wildAnimal = animals[select];
+// Вибераем из селекта
+let sel = document.getElementById("mySelect");
+sel.addEventListener('change', function() {
     wildAnimal = animals[this.value];
 });
 
