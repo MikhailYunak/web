@@ -20,19 +20,16 @@ let boar = new Animals(
         'Кабан свинья, которая не поддалась на уговоры',
         'Кабан санитар леса');
 
-// Сравниваем значения селекта с названиями класса и передаем класс в переменную
+var animals = {
+    'fox' : fox,
+    'wolf': wolf,
+    'boar': boar,
+};
+var wildAnimal = new Animals();
 
 let select = document.getElementById("mySelect");
 select.addEventListener('change', function() {
-    if(this.value === 'fox'){
-        animal = fox
-    };
-    if(this.value === 'wolf'){
-        animal = wolf
-    };
-    if(this.value === 'boar'){
-        animal = boar
-    };
+    wildAnimal = animals[this.value];
 });
 
 // Присваеваем переменную к кнопкам по класу
@@ -53,7 +50,7 @@ button.forEach(function(index){
             id = 3};
         let div = document.createElement('div');
         div.id = 'snackBar' + id;
-        var text = animal.arg[id-1];
+        var text = wildAnimal.arg[id-1];
         document.body.append(div);
         div.appendChild(document.createTextNode(text))
         setTimeout(()=>{
