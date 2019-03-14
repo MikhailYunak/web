@@ -4,7 +4,9 @@ class Animals {
         this.arg = arg;
     }
 };
+
 // Создаем прототипы класса
+
 let fox = new Animals (
         'Лиса хитрый зверь',
         'Он ничем не отличался от ста тысяч других лисиц',
@@ -17,7 +19,9 @@ let boar = new Animals(
         'Кабан дикий свин',
         'Кабан свинья, которая не поддалась на уговоры',
         'Кабан санитар леса');
+
 // Сравниваем значения селекта с названиями класса и передаем класс в переменную
+
 let select = document.getElementById("mySelect");
 select.addEventListener('change', function() {
     if(this.value === 'fox'){
@@ -30,11 +34,15 @@ select.addEventListener('change', function() {
         animal = boar
     };
 });
+
 // Присваеваем переменную к кнопкам по класу
+
 let button = document.querySelectorAll(".myBtn");
+
 // Используем цикл forEach к каждой кнопке и присваиваем индекс
 // Затем создаем "див" и тудаже текстовый.
 // Далее функция сетТаймаута и удаление по клику на "див"
+
 button.forEach(function(index){
     index.onclick = (id) => {
         if(index == button[0]){
@@ -50,10 +58,9 @@ button.forEach(function(index){
         div.appendChild(document.createTextNode(text))
         setTimeout(()=>{
             div.remove();
-            }, 3000);
-        div.onclick = ()=> {
-            div.remove(this);
-             };
-             
+                }, 3000);
+                div.onclick = ()=> {
+                    div.remove(this);
+                    };      
     }
 });
