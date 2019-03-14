@@ -32,8 +32,8 @@ select.addEventListener('change', function() {
 
 let button = document.querySelectorAll(".myBtn");
 
-// Используем цикл forEach к каждой кнопке и присваиваем индекс
-// Затем создаем "див" и тудаже текстовый.
+// Используем цикл forEach для каждой кнопки
+// Затем создаем "див" и туда же текст.
 // Далее функция сетТаймаута и удаление по клику на "див"
 
 button.forEach(function(index){
