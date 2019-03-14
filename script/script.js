@@ -1,8 +1,11 @@
+//  Создаем класс
 class Animals {
     constructor(...arg) {
         this.arg = arg;
     }
 };
+
+// Создаем прототипы класса
 
 var animals = {
     'fox' : new Animals (
@@ -19,25 +22,22 @@ var animals = {
         'Кабан санитар леса'),
 };
 var wildAnimal = new Animals();
-
-let sel = document.getElementById("mySelect");
+// Значение по умолчанию
 let select = document.getElementById("mySelect").value;
 wildAnimal = animals[select];
-// for (var key in animals) {
-//     var Option = new Option(key, key)
-//     select.appendChild(Option);
-// };
-
+// Вибераем из селекта
+let sel = document.getElementById("mySelect");
 sel.addEventListener('change', function() {
     wildAnimal = animals[this.value];
 });
 
-// var selector = document.getElementById("mySelect");
-// var newOption = new Option("Волк", "wolf");
-//   selector.appendChild(newOption);
-//   newOption.selected = true;
+// Присваеваем переменную к кнопкам по класу
 
 let button = document.querySelectorAll(".myBtn");
+
+// Используем цикл forEach для каждой кнопки
+// Затем создаем "див" и туда же текст.
+// Далее функция сетТаймаута и удаление по клику на "див"
 
 button.forEach(function(index){
     index.onclick = (id) => {
@@ -57,6 +57,6 @@ button.forEach(function(index){
                 }, 3000);
                 div.onclick = ()=> {
                     div.remove(this);
-                };      
+                    };      
     }
 });
