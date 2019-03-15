@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/Foxes.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35vh;
+}
+.button{
+    background-color: #F6E9D3;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #000000;
+    display: inline-block;
+    width: 100px;
+    margin: 10px;
+}
+.button:hover{
+    background-color: #F6E9D3;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.marginAll{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 15px;
+}
+#snackBar0{
+    min-width: 250px;
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    left: 20px;
+    bottom: 20px;
+}
+#snackBar1{
+    min-width: 250px;
+    background-color: rgb(101, 20, 231);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    top: 20px;
+}
+#snackBar2{
+    min-width: 250px;
+    background-color: #5f5f5f;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    left: 20px;
+    top: 20px;
+}
