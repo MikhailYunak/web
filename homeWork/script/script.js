@@ -45,12 +45,12 @@ sel.addEventListener('change', function() {
     wildAnimal = animals[this.value];
 });
 // Bottom 
-document.getElementById('leftBottom').addEventListener('click', function(){
+document.getElementById('leftBottom').addEventListener('click',()=>{
     wildAnimal.getNotification(0);
 });
-document.getElementById('rightTop').addEventListener('click', function(){
+document.getElementById('rightTop').addEventListener('click',()=>{
     wildAnimal.getNotification(1);
 });
-document.getElementById('leftTop').addEventListener('click', function(){
+document.getElementById('leftTop').addEventListener('click',()=>{
     wildAnimal.getNotification(2);
 });
