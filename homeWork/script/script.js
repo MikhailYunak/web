@@ -28,7 +28,7 @@ let placement = {
 
 // Creating maping with configuration;
 // Creating object with expressions;
-let animals = {
+let configAnimals = {
     'fox': new Animal(
         {
             [placement.BOTTOM_LEFT]: 'Лиса хитрый зверь',
@@ -55,7 +55,7 @@ var wildAnimal = animals[select];
 // Working with selects;
 let sel = document.getElementById("animalsSelect");
 sel.addEventListener('change', function () {
-    wildAnimal = animals[this.value];
+    wildAnimal = configAnimals[this.value];
 });
 // Bottom 
 document.getElementById('firstButton').addEventListener('click', () => {
