@@ -1,5 +1,5 @@
 // Creating class with method;
-class Animal {
+class SnackBar {
 
     constructor(configuration) {
         this.configuration = configuration;
@@ -28,20 +28,20 @@ let placement = {
 
 // Creating maping with configuration;
 // Creating object with expressions;
-let configAnimals = {
-    'fox': new Animal(
+let dateAnimals = {
+    'fox': new SnackBar(
         {
             [placement.BOTTOM_LEFT]: 'Лиса хитрый зверь',
             [placement.TOP_RIGHT]: 'Он ничем не отличался от ста тысяч других лисиц',
             [placement.TOP_LEFT]: 'Рыжий лис'
         }),
-    'wolf': new Animal(
+    'wolf': new SnackBar(
         {
             [placement.BOTTOM_LEFT]: 'Волк вожак стаи',
             [placement.TOP_RIGHT]: 'Волк собирает грибы в лесу',
             [placement.TOP_LEFT]: 'Волк меняет шкуру, но не нрав'
         }),
-    'boar': new Animal(
+    'boar': new SnackBar(
         {
             [placement.BOTTOM_LEFT]: 'Кабан дикий свин',
             [placement.TOP_RIGHT]: 'Кабан свинья, которая не поддалась на уговоры',
@@ -51,11 +51,11 @@ let configAnimals = {
 
 // Creating default select; 
 let select = document.getElementById("animalsSelect").value;
-var wildAnimal = animals[select];
+var wildAnimal = dateAnimals[select];
 // Working with selects;
 let sel = document.getElementById("animalsSelect");
 sel.addEventListener('change', function () {
-    wildAnimal = configAnimals[this.value];
+    wildAnimal = dateAnimals[this.value];
 });
 // Bottom 
 document.getElementById('firstButton').addEventListener('click', () => {
