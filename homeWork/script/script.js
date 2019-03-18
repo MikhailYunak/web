@@ -48,13 +48,10 @@ let animals = {
             [placement.TOP_LEFT]: 'Кабан санитар леса'
         }),
 };
-// Creating default variable; 
-
-var wildAnimal = new Animal();
 
 // Creating default select; 
 let select = document.getElementById("animalsSelect").value;
-wildAnimal = animals[select];
+var wildAnimal = animals[select];
 // Working with selects;
 let sel = document.getElementById("animalsSelect");
 sel.addEventListener('change', function () {
