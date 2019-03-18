@@ -61,12 +61,12 @@ sel.addEventListener('change', function () {
     wildAnimal = animals[this.value];
 });
 // Bottom 
-document.getElementById('bottomLeft').addEventListener('click', () => {
+document.getElementById('firstButton').addEventListener('click', () => {
     wildAnimal.showNotification(placement.BOTTOM_LEFT);
 });
-document.getElementById('topRight').addEventListener('click', () => {
+document.getElementById('secondButton').addEventListener('click', () => {
     wildAnimal.showNotification(placement.TOP_RIGHT);
 });
-document.getElementById('topLeft').addEventListener('click', () => {
+document.getElementById('thirdButton').addEventListener('click', () => {
     wildAnimal.showNotification(placement.TOP_LEFT);
 });
