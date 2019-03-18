@@ -1,56 +1,72 @@
 // Creating class with method;
-class Animal{
-    constructor(...arg){
-        this.arg = arg;
+class Animal {
+
+    constructor(configuration) {
+        this.configuration = configuration;
     }
-    getNotification(i){
+
+    showNotification(placement) {
         let div = document.createElement('div');
-        let text = this.arg[i];
-        div.id = 'snackBar' + i;
+        let text = this.configuration[placement];
+        div.id = 'snackbar' + '-' + placement;
         document.body.append(div);
         div.appendChild(document.createTextNode(text));
         setTimeout(() => {
             div.remove();
-                }, 3000);
+        }, 3000);
         div.onclick = () => {
             div.remove(this);
-                };      
+        }
     }
 };
+// Create an analog enum to js;
+let placement = {
+    BOTTOM_LEFT: 'bottom-left',
+    TOP_RIGHT: 'top-right',
+    TOP_LEFT: 'top-left'
+}
+
+// Creating maping with configuration;
 // Creating object with expressions;
-let animal = {
-    'fox' : new Animal (
-        'Лиса хитрый зверь',
-        'Он ничем не отличался от ста тысяч других лисиц',
-        'Рыжий лис'),
+let animals = {
+    'fox': new Animal(
+        {
+            [placement.BOTTOM_LEFT]: 'Лиса хитрый зверь',
+            [placement.TOP_RIGHT]: 'Он ничем не отличался от ста тысяч других лисиц',
+            [placement.TOP_LEFT]: 'Рыжий лис'
+        }),
     'wolf': new Animal(
-        'Волк вожак стаи',
-        'Волк собирает грибы в лесу',
-        'Волк меняет шкуру, но не нрав'),
+        {
+            [placement.BOTTOM_LEFT]: 'Волк вожак стаи',
+            [placement.TOP_RIGHT]: 'Волк собирает грибы в лесу',
+            [placement.TOP_LEFT]: 'Волк меняет шкуру, но не нрав'
+        }),
     'boar': new Animal(
-        'Кабан дикий свин',
-        'Кабан свинья, которая не поддалась на уговоры',
-        'Кабан санитар леса'),
+        {
+            [placement.BOTTOM_LEFT]: 'Кабан дикий свин',
+            [placement.TOP_RIGHT]: 'Кабан свинья, которая не поддалась на уговоры',
+            [placement.TOP_LEFT]: 'Кабан санитар леса'
+        }),
 };
 // Creating default variable; 
 
 var wildAnimal = new Animal();
 
 // Creating default select; 
-let select = document.getElementById("mySelect").value;
-wildAnimal = animal[select];
+let select = document.getElementById("animalsSelect").value;
+wildAnimal = animals[select];
 // Working with selects;
-let sel = document.getElementById("mySelect");
-sel.addEventListener('change', function() {
-    wildAnimal = animal[this.value];
+let sel = document.getElementById("animalsSelect");
+sel.addEventListener('change', function () {
+    wildAnimal = animals[this.value];
 });
 // Bottom 
-document.getElementById('bottomLeft').addEventListener('click',() => {
-    wildAnimal.getNotification(0);
+document.getElementById('bottomLeft').addEventListener('click', () => {
+    wildAnimal.showNotification(placement.BOTTOM_LEFT);
 });
-document.getElementById('topRight').addEventListener('click',() => {
-    wildAnimal.getNotification(1);
+document.getElementById('topRight').addEventListener('click', () => {
+    wildAnimal.showNotification(placement.TOP_RIGHT);
 });
-document.getElementById('topLeft').addEventListener('click',() => {
-    wildAnimal.getNotification(2);
+document.getElementById('topLeft').addEventListener('click', () => {
+    wildAnimal.showNotification(placement.TOP_LEFT);
 });
