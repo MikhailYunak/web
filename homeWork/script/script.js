@@ -60,7 +60,7 @@ let sel = document.getElementById("animalsSelect");
 sel.addEventListener('change', function () {
     wildAnimal = animals[this.value];
 });
-// Bottom 
+// Button 
 document.getElementById('bottomLeft').addEventListener('click', () => {
     wildAnimal.showNotification(placement.BOTTOM_LEFT);
 });
