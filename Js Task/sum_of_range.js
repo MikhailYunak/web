@@ -30,4 +30,8 @@ function sum1(arr = []) {
     return total;
 }
 
+<<<<<<< Updated upstream
 console.log(sum1(range(1, 10)));
+=======
+console.log(sum1(range(1, 10)));
+>>>>>>> Stashed changes
